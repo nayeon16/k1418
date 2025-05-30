@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<!--
+  Infographic Title: AI에게 프롬프트를 어떻게 입력해야 효과적으로 답변을 얻을 수 있을까?
+  Date Generated: 2025-05-30
+  Data Source: Student Collaborative Investigation Report
+  Key Technologies Used: HTML, Tailwind CSS, Chart.js
+  Note: This is a single-file HTML infographic. All CSS and JavaScript are embedded.
+-->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 프롬프트 활용 조사 보고서 인포그래픽</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #F4F7F9; /* Light Background */
+            color: #263238; /* Dark Text */
+        }
+        .section-title {
+            color: #2A62B6; /* Primary Blue */
+        }
+        .card {
+            background-color: #FFFFFF; /* Light Background (Card) */
+            border-radius: 0.75rem; /* 12px */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .chart-container {
+            position: relative;
+            margin: auto;
+            /* height: 300px; /* Default height, can be overridden by Tailwind */
+            /* width: 100%; /* Default width, can be overridden by Tailwind */
+        }
+        /* Custom Chart.js tooltip */
+        .chartjs-tooltip {
+            opacity: 1;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border-radius: 3px;
+            transition: all .1s ease;
+            pointer-events: none;
+            transform: translate(-50%, 0);
+        }
+        .chartjs-tooltip-key {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+        }
+        h1, h2, h3 {
+            letter-spacing: -0.025em;
+        }
+        /* Specific font sizes from report for consistency in titles */
+        .report-title-text { font-size: 28pt; font-weight: 900; } /* 매우 굵게 */
+        .level1-title-text { font-size: 18pt; font-weight: 800; } /* 아주 굵게 */
+        .level2-title-text { font-size: 14pt; font-weight: 700; } /* 굵게 */
+        .level3-title-text { font-size: 12pt; font-weight: 600; } /* 약간 굵게 */
+        .body-text-size { font-size: 11pt; font-weight: 500; } /* 중간 */
+
+        @media (max-width: 768px) {
+            .report-title-text { font-size: 22pt; }
+            .level1-title-text { font-size: 16pt; }
+            .level2-title-text { font-size: 13pt; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8">
+
+        <header class="mb-12 text-center">
+            <h1 class="report-title-text section-title mb-4">AI에게 프롬프트를 어떻게 입력해야 효과적으로 답변을 얻을 수 있을까?</h1>
+            <p class="text-lg text-gray-700">미림마이스터고등학교 1학년 4반 2조</p>
+            <p class="text-sm text-gray-500">작성일: 2025년 5월 29일</p>
+            <div class="mt-2 text-sm text-gray-600">
+                <p>팀원: 공은성, 권초현, 이보미, 홍성재, 황나연</p>
+            </div>
+        </header>
+
+        <main>
+            <section class="mb-12 card p-6">
+                <h2 class="level1-title-text section-title mb-4">1. 조사 동기와 목적</h2>
+                <div class="space-y-4 body-text-size">
+                    <p>최근 인공지능(AI) 활용이 급증함에 따라, 학교 현장에서도 AI가 학습 도구로 적극 활용되고 있다. 본 조사는 미림마이스터고 1학년 4반 학생들이 실제로 AI를 어떻게 사용하는지, 특히 프롬프트 작성 방식과 질문 구성 및 수정 과정을 살펴보고자 기획되었다.</p>
+                    <p>프롬프트의 구체성과 명확성이 AI 응답의 질에 미치는 영향을 분석하여, 향후 AI 활용 수업의 방향을 제시하고 학생들이 더 효과적으로 AI를 활용하도록 돕는 것을 목표로 한다. 또한, 생성형 AI 시대에 요구되는 디지털 리터러시 능력 향상을 위한 기초 자료로 활용하고자 한다.</p>
+                    <div class="p-4 bg-sky-50 rounded-lg border border-sky-200">
+                        <h3 class="level3-title-text text-sky-700 mb-2">디지털 리터러시란?</h3>
+                        <p class="text-sm text-gray-700">단순히 디지털 도구를 잘 다루는 것을 넘어, 비판적으로 이해하고 정보를 효과적으로 활용하며, 문제 해결이나 창의적 사고를 적용할 수 있는 능력이다. 원하는 정보를 얻기 위해 질문을 구조화하거나 반복적으로 조정하는 과정에서 디지털 리터러시가 발휘된다.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12 card p-6">
+                <h2 class="level1-title-text section-title mb-4">2. 조사 계획</h2>
+                <div class="grid md:grid-cols-3 gap-6 body-text-size">
+                    <div class="p-4 bg-teal-50 rounded-lg">
+                        <h3 class="level2-title-text text-teal-700 mb-2">가. 조사 기간</h3>
+                        <p>시작일: 2025년 5월 1일</p>
+                        <p>종료일: 2025년 5월 17일</p>
+                        <p class="text-sm mt-1 text-gray-600">선정 이유: AI 활용 수업 직후, 학생들의 인식과 반응을 신속하게 조사하기 위함.</p>
+                    </div>
+                    <div class="p-4 bg-teal-50 rounded-lg">
+                        <h3 class="level2-title-text text-teal-700 mb-2">나. 조사 대상</h3>
+                        <p>성별 구성: 남학생, 여학생</p>
+                        <p>대상 인원: 총 18명</p>
+                        <p class="text-sm mt-1 text-gray-600">선정 기준: AI 활용 수업을 경험한 동일 학급 내 학생.</p>
+                    </div>
+                    <div class="p-4 bg-teal-50 rounded-lg">
+                        <h3 class="level2-title-text text-teal-700 mb-2">다. 조사 방법</h3>
+                        <p>인터뷰 방식: 설문조사 + 개별 인터뷰 병행</p>
+                        <p>설문조사 형식: 객관식과 단답형 혼합 (온라인/종이)</p>
+                        <p class="text-sm mt-1 text-gray-600">데이터 수집 목적: AI 사용 경험과 실제 전략을 심층적으로 파악.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="level1-title-text section-title mb-6 text-center">3. 조사 결과</h2>
+
+                <div class="mb-10 card p-6">
+                    <h3 class="level2-title-text text-gray-800 mb-6 text-center">가. 설문 조사 결과</h3>
+                    
+                    <div class="mb-8 p-4 rounded-lg bg-gray-50">
+                        <p class="body-text-size text-center text-gray-700">대부분의 학생들은 AI에게 질문할 때 프롬프트의 구체성이 중요하다고 인식하며, 만족스럽지 못한 답변을 받았을 경우 질문에 더 자세한 정보나 맥락을 추가하여 개선하려는 경향을 보였다. 또한, AI의 한계를 고려하는 것이 효과적인 답변을 얻는 데 도움이 된다고 생각했다.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                        <div class="card p-4 shadow-lg">
+                            <h4 class="level3-title-text text-center mb-3">Q1: 프롬프트 구체성의 중요도</h4>
+                            <div class="chart-container h-72 md:h-80">
+                                <canvas id="surveyChart1"></canvas>
+                            </div>
+                            <p class="text-xs text-center mt-2 text-gray-600">응답자의 94.4%가 프롬프트 구체성을 "중요하다" 또는 "매우 중요하다"고 인식했다.</p>
+                        </div>
+
+                        <div class="card p-4 shadow-lg">
+                            <h4 class="level3-title-text text-center mb-3">Q2: 불만족 시 프롬프트 수정 방법</h4>
+                            <div class="chart-container h-72 md:h-80">
+                                <canvas id="surveyChart2"></canvas>
+                            </div>
+                            <p class="text-xs text-center mt-2 text-gray-600">77.8%의 학생이 만족스럽지 못한 답변 시 "질문에 더 자세한 정보나 맥락을 추가"한다고 응답했다.</p>
+                        </div>
+
+                        <div class="card p-4 shadow-lg">
+                            <h4 class="level3-title-text text-center mb-3">Q3: AI 한계 고려의 도움 정도</h4>
+                            <div class="chart-container h-72 md:h-80">
+                                <canvas id="surveyChart3"></canvas>
+                            </div>
+                             <p class="text-xs text-center mt-2 text-gray-600">77.8%의 학생이 AI의 한계를 고려하는 것이 답변 획득에 "도움이 된다" 또는 "매우 도움이 된다"고 응답했다.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10 pt-6 border-t border-gray-200">
+                        <h4 class="level2-title-text text-gray-800 mb-4 text-center">설문 기반 종합 결과</h4>
+                        <div class="grid md:grid-cols-3 gap-4 text-center body-text-size">
+                            <div class="p-4 bg-blue-50 rounded-lg">
+                                <p class="text-3xl font-bold text-blue-600">16/18</p>
+                                <p class="text-gray-700">AI 주기적 활용</p>
+                            </div>
+                            <div class="p-4 bg-green-50 rounded-lg">
+                                <p class="text-3xl font-bold text-green-600">77.8%</p>
+                                <p class="text-gray-700">"질문 구체적일수록 만족"</p>
+                            </div>
+                            <div class="p-4 bg-yellow-50 rounded-lg">
+                                <p class="text-3xl font-bold text-yellow-600">약 80%</p>
+                                <p class="text-gray-700">질문 반복 수정 시도</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card p-6">
+                    <h3 class="level2-title-text text-gray-800 mb-6 text-center">나. 인터뷰 요약</h3>
+                    <div class="grid md:grid-cols-2 gap-8 body-text-size">
+                        <div class="p-6 bg-indigo-50 rounded-lg shadow">
+                            <h4 class="level3-title-text text-indigo-700 mb-3">학생 1: 김희성</h4>
+                            <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                                <li>만족스러운 답변까지 평균 <strong>10분</strong> 소요. 역사 수행평가 시 <strong>20분 이상</strong> 소요 후 매우 만족.</li>
+                                <li>프롬프트 방식: 주제 간단 제시 → AI 의견 요청 → 내용 바탕 글쓰기 요청.</li>
+                                <li class="text-red-600">불편한 점: 학교 인터넷 환경으로 인한 <strong>응답 속도 저하</strong>.</li>
+                            </ul>
+                            <p class="mt-3 text-xs italic text-indigo-600">"주제를 간단하게 적고 그 주제에 대해 생각하는 의견을 물어보고 그거를 좀 다듬어서 글을 써달라고 했습니다."</p>
+                        </div>
+                        
+                        <div class="p-6 bg-pink-50 rounded-lg shadow">
+                            <h4 class="level3-title-text text-pink-700 mb-3">학생 2: 박주혁</h4>
+                            <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                                <li>초보자 조언: 프롬프트를 <strong>최대한 상세하고 구체적으로</strong> 작성.</li>
+                                <li>사례: 로고 디자인 요청 시 스타일/컬러/용도 등 세부 입력 → 만족스러운 결과.</li>
+                                <li>실수 경험: 여행지 추천 시 지역 미명시 → 불명확한 답변. 지역 명시 후 유용한 정보 획득.</li>
+                            </ul>
+                             <p class="mt-3 text-xs italic text-pink-600">"최대한 상세하고 구체적으로 적는 게 유리하다고 생각합니다... 지역을 명확히 지정하지 않아 광범위한 정보를 받아 혼란스러웠던 적이 있었으며, 이후 지역을 구체화하자 더 정확하고 유용한 정보를 얻을 수 있었습니다."</p>
+                        </div>
+                    </div>
+                     <div class="mt-6 p-4 bg-gray-100 rounded-lg text-center">
+                        <p class="body-text-size text-gray-700">인터뷰 결과, 학생들은 AI 사용 경험을 통해 프롬프트의 구체화, 반복적 수정의 중요성을 체감하고 있었으며, AI의 한계를 인지하고 이를 극복하려는 노력을 보였다.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12 card p-6">
+                <h2 class="level1-title-text section-title mb-4">4. 결론</h2>
+                <div class="space-y-4 body-text-size">
+                    <p>본 조사를 통해 미림마이스터고 1학년 4반 학생들은 AI를 활용할 때 질문의 명확성과 구체성이 답변의 질에 큰 영향을 미친다는 점을 잘 인식하고 있었다. 많은 학생이 AI의 한계를 경험적으로 체감하며, 이를 보완하기 위해 프롬프트를 전략적으로 다듬는 태도를 보였다.</p>
+                    <p>학생들은 모호한 질문보다 구체적이고 상황에 맞는 질문을 하도록 학습하고 있으며, 이는 단순한 기능 사용을 넘어 디지털 리터러시와 메타인지 능력을 함께 키워가고 있음을 시사한다. 예를 들어, "AI야, 환경 문제 알려줘" 대신 "기후 변화로 인한 해수면 상승 원인을 중학생도 이해할 수 있게 설명해줘"로 질문을 구체화하여 원하는 답을 얻는 사례가 있었다.</p>
+                    <p>따라서 향후 AI 교육은 기능 중심을 넘어, 질문 설계 능력, 결과 해석 및 정보 재구성 능력을 기르는 방향으로 나아가야 한다. 본 조사는 실제 학생들의 AI 사용 경험과 전략적 사고방식을 파악하여 AI 교육의 방향성을 설정하는 데 실질적인 기초 자료로 활용될 수 있을 것이다.</p>
+                </div>
+            </section>
+
+            <section class="card p-6">
+                <h2 class="level1-title-text section-title mb-4">5. 참고자료</h2>
+                <ul class="list-disc list-inside space-y-1 body-text-size text-sm text-gray-700">
+                    <li>Chat GPT</li>
+                    <li>Gemini</li>
+                    <li>Perplexity</li>
+                    <li>클로바노트 (인터뷰 기록용)</li>
+                    <li>보고서 내 "활동지: 생성형 AI 활용 수집 자료 확인 및 보고서 목차/세부 개요 작성하기"</li>
+                    <li>구글 설문지 (https://docs.google.com/forms/d/1JYrCqeUg8lcWLeW8RzO8PIg-rer_VlGAdVY22YBcXW8/edit)</li>
+                    <li>기타 보고서 작성에 참고한 웹사이트 (genai-use-report01.netlify.app, genai-use-report02.netlify.app)</li>
+                    <li>공통국어2 교과서 198p</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="mt-12 pt-8 border-t border-gray-300 text-center">
+            <p class="text-sm text-gray-600">&copy; 2025 미림마이스터고 1학년 4반 2조. AI 프롬프트 활용 조사 보고서 기반 인포그래픽.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const primaryBlue = '#2A62B6';
+            const secondaryTeal = '#4ECDC4';
+            const accentGrey = '#A9A9A9';
+            const supportingLightBlue = '#E0F2FE';
+            const darkText = '#263238';
+
+            // Helper function for label formatting
+            function formatLabel(str, maxCharsPerLine = 10) { // Adjusted for better fit in charts
+                if (typeof str !== 'string') return [String(str)];
+                const words = str.split(/(\s+)/); // Split by space, keeping spaces
+                let currentLine = '';
+                const lines = [];
+                for (let i = 0; i < words.length; i++) {
+                    const word = words[i];
+                    if (currentLine.length + word.length > maxCharsPerLine && currentLine.length > 0) {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word;
+                }
+                if (currentLine.trim().length > 0) {
+                    lines.push(currentLine.trim());
+                }
+                return lines.length > 0 ? lines : [str]; // Ensure at least one line
+            }
+            
+            const defaultChartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: darkText,
+                            font: { size: 10 } // Smaller legend font
+                        }
+                    },
+                    tooltip: {
+                        enabled: true,
+                        backgroundColor: 'rgba(0,0,0,0.8)',
+                        titleFont: { size: 12 },
+                        bodyFont: { size: 11 },
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    label += context.parsed.y.toFixed(1) + '% (' + context.raw.count + '명)';
+                                } else if (context.parsed.x !== null) {
+                                     label += context.parsed.x.toFixed(1) + '% (' + context.raw.count + '명)';
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: {
+                            color: darkText,
+                            font: { size: 10 }, // Smaller axis font
+                            callback: function(value, index, values) {
+                                const label = this.getLabelForValue(value);
+                                return formatLabel(label, 12); // Adjust maxCharsPerLine as needed
+                            }
+                        },
+                        grid: { display: false }
+                    },
+                    y: {
+                        ticks: {
+                            color: darkText,
+                            font: { size: 10 }, // Smaller axis font
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        },
+                        grid: { color: '#e0e0e0', drawBorder: false },
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            };
+            
+            const pieChartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: darkText,
+                            font: { size: 10 },
+                            // Custom legend label formatter for pie charts
+                            generateLabels: function(chart) {
+                                const data = chart.data;
+                                if (data.labels.length && data.datasets.length) {
+                                    return data.labels.map(function(label, i) {
+                                        const meta = chart.getDatasetMeta(0);
+                                        const style = meta.controller.getStyle(i);
+                                        const percentage = data.datasets[0].data[i];
+                                        const count = data.datasets[0].rawCounts[i];
+                                        const formattedLabel = formatLabel(label, 15).join(' '); // Join lines for legend
+                                        
+                                        return {
+                                            text: `${formattedLabel}: ${percentage.toFixed(1)}% (${count}명)`,
+                                            fillStyle: style.backgroundColor,
+                                            strokeStyle: style.borderColor,
+                                            lineWidth: style.borderWidth,
+                                            hidden: isNaN(data.datasets[0].data[i]) || meta.data[i].hidden,
+                                            index: i
+                                        };
+                                    });
+                                }
+                                return [];
+                            }
+                        }
+                    },
+                    tooltip: {
+                        enabled: true,
+                        backgroundColor: 'rgba(0,0,0,0.8)',
+                        callbacks: {
+                            label: function(context) {
+                                const label = context.label || '';
+                                const value = context.parsed || 0;
+                                const count = context.dataset.rawCounts[context.dataIndex];
+                                return `${formatLabel(label, 20).join(' ')}: ${value.toFixed(1)}% (${count}명)`;
+                            }
+                        }
+                    }
+                }
+            };
+
+
+            // Survey Chart 1: 프롬프트 구체성 중요도 (세로 막대 차트)
+            const surveyData1 = {
+                labels: ['보통이다', '중요하다', '매우 중요하다'], // 1,2점은 0명이므로 제외
+                datasets: [{
+                    label: '응답 비율',
+                    data: [(1/18*100), (11/18*100), (6/18*100)],
+                    rawCounts: [1, 11, 6], // 실제 응답자 수
+                    backgroundColor: [secondaryTeal, primaryBlue, '#1E40AF'], // Different shades of blue/teal
+                    borderColor: [secondaryTeal, primaryBlue, '#1E40AF'],
+                    borderWidth: 1
+                }]
+            };
+            new Chart(document.getElementById('surveyChart1'), {
+                type: 'bar',
+                data: surveyData1,
+                options: { ...defaultChartOptions, 
+                    scales: {
+                        ...defaultChartOptions.scales,
+                        x: { ...defaultChartOptions.scales.x,
+                            ticks: {
+                                ...defaultChartOptions.scales.x.ticks,
+                                callback: function(value, index, values) {
+                                    return formatLabel(surveyData1.labels[index], 10);
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Survey Chart 2: 프롬프트 수정/개선 방법 (원형 차트)
+            const surveyData2 = {
+                labels: [
+                    '단어/표현 변경', 
+                    '자세한 정보/맥락 추가', 
+                    '답변 형식/스타일 명시', 
+                    // '질문 분할', // 0명 제외
+                    '수정 안 함/사용 중단'
+                ],
+                datasets: [{
+                    label: '응답 비율',
+                    data: [(1/18*100), (14/18*100), (2/18*100), (1/18*100)],
+                    rawCounts: [1, 14, 2, 1], // 실제 응답자 수
+                    backgroundColor: [primaryBlue, secondaryTeal, supportingLightBlue, accentGrey, '#FBBF24'],
+                    hoverOffset: 4
+                }]
+            };
+             new Chart(document.getElementById('surveyChart2'), {
+                type: 'pie',
+                data: surveyData2,
+                options: pieChartOptions
+            });
+
+
+            // Survey Chart 3: AI 한계 고려 도움 정도 (가로 막대 차트)
+            const surveyData3 = {
+                labels: ['보통이다', '조금 도움이 된다', '매우 도움이 된다'], // 1,2점은 0명이므로 제외
+                datasets: [{
+                    label: '응답 비율',
+                    data: [(4/18*100), (9/18*100), (5/18*100)],
+                    rawCounts: [4, 9, 5], // 실제 응답자 수
+                    backgroundColor: [accentGrey, secondaryTeal, primaryBlue],
+                    borderColor: [accentGrey, secondaryTeal, primaryBlue],
+                    borderWidth: 1
+                }]
+            };
+            new Chart(document.getElementById('surveyChart3'), {
+                type: 'bar', // 가로 막대로 변경하려면 indexAxis: 'y' 추가
+                data: surveyData3,
+                options: { ...defaultChartOptions, 
+                    indexAxis: 'y', // 가로 막대 차트
+                    scales: {
+                        x: { ...defaultChartOptions.scales.x, 
+                            max:100, 
+                            ticks: { 
+                                ...defaultChartOptions.scales.x.ticks,
+                                callback: function(value) { return value + '%'; } 
+                            }
+                        },
+                        y: { ...defaultChartOptions.scales.y,
+                            ticks: {
+                                ...defaultChartOptions.scales.y.ticks,
+                                callback: function(value, index, values) { // y축 레이블 포맷팅
+                                    return formatLabel(surveyData3.labels[index], 15);
+                                }
+                            },
+                            max: undefined // y축 max는 자동으로 설정되도록
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+    </body>
+</html>
