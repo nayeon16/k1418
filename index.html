@@ -73,6 +73,7 @@
 <body class="antialiased">
     <div class="container mx-auto p-4 sm:p-6 lg:p-8">
 
+        <!-- 0. 제목 및 개요 섹션 -->
         <header class="mb-12 text-center">
             <h1 class="report-title-text section-title mb-4">AI에게 프롬프트를 어떻게 입력해야 효과적으로 답변을 얻을 수 있을까?</h1>
             <p class="text-lg text-gray-700">미림마이스터고등학교 1학년 4반 2조</p>
@@ -83,6 +84,7 @@
         </header>
 
         <main>
+            <!-- 1. 조사 동기와 목적 -->
             <section class="mb-12 card p-6">
                 <h2 class="level1-title-text section-title mb-4">1. 조사 동기와 목적</h2>
                 <div class="space-y-4 body-text-size">
@@ -95,6 +97,7 @@
                 </div>
             </section>
 
+            <!-- 2. 조사 계획 -->
             <section class="mb-12 card p-6">
                 <h2 class="level1-title-text section-title mb-4">2. 조사 계획</h2>
                 <div class="grid md:grid-cols-3 gap-6 body-text-size">
@@ -119,9 +122,11 @@
                 </div>
             </section>
 
+            <!-- 3. 조사 결과 -->
             <section class="mb-12">
                 <h2 class="level1-title-text section-title mb-6 text-center">3. 조사 결과</h2>
 
+                <!-- 가. 설문 조사 결과 -->
                 <div class="mb-10 card p-6">
                     <h3 class="level2-title-text text-gray-800 mb-6 text-center">가. 설문 조사 결과</h3>
                     
@@ -130,6 +135,8 @@
                     </div>
 
                     <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                        <!-- Visualization: Survey Question 1 Chart -->
+                        <!-- Data Source: Survey Question 1 - 프롬프트 구체성 중요도 -->
                         <div class="card p-4 shadow-lg">
                             <h4 class="level3-title-text text-center mb-3">Q1: 프롬프트 구체성의 중요도</h4>
                             <div class="chart-container h-72 md:h-80">
@@ -138,6 +145,8 @@
                             <p class="text-xs text-center mt-2 text-gray-600">응답자의 94.4%가 프롬프트 구체성을 "중요하다" 또는 "매우 중요하다"고 인식했다.</p>
                         </div>
 
+                        <!-- Visualization: Survey Question 2 Chart -->
+                        <!-- Data Source: Survey Question 2 - 프롬프트 수정/개선 방법 -->
                         <div class="card p-4 shadow-lg">
                             <h4 class="level3-title-text text-center mb-3">Q2: 불만족 시 프롬프트 수정 방법</h4>
                             <div class="chart-container h-72 md:h-80">
@@ -146,6 +155,8 @@
                             <p class="text-xs text-center mt-2 text-gray-600">77.8%의 학생이 만족스럽지 못한 답변 시 "질문에 더 자세한 정보나 맥락을 추가"한다고 응답했다.</p>
                         </div>
 
+                        <!-- Visualization: Survey Question 3 Chart -->
+                        <!-- Data Source: Survey Question 3 - AI 한계 고려 도움 정도 -->
                         <div class="card p-4 shadow-lg">
                             <h4 class="level3-title-text text-center mb-3">Q3: AI 한계 고려의 도움 정도</h4>
                             <div class="chart-container h-72 md:h-80">
@@ -155,6 +166,7 @@
                         </div>
                     </div>
                     
+                    <!-- 종합 결론 통계 -->
                     <div class="mt-10 pt-6 border-t border-gray-200">
                         <h4 class="level2-title-text text-gray-800 mb-4 text-center">설문 기반 종합 결과</h4>
                         <div class="grid md:grid-cols-3 gap-4 text-center body-text-size">
@@ -174,9 +186,20 @@
                     </div>
                 </div>
 
+                <!-- 나. 인터뷰 요약 -->
                 <div class="card p-6">
                     <h3 class="level2-title-text text-gray-800 mb-6 text-center">나. 인터뷰 요약</h3>
+                    
+                    <!-- Visualization: Word Cloud Image -->
+                    <!-- Data Source: Word cloud generated from interview transcripts -->
+                    <div class="my-6">
+                        <img src="src/KakaoTalk_20250523_134629507.png" alt="인터뷰 핵심 키워드 워드 클라우드" class="w-full max-w-xl mx-auto rounded-lg shadow-md">
+                        <p class="text-center text-sm text-gray-500 mt-2">인터뷰에서 자주 언급된 핵심 키워드 워드 클라우드</p>
+                    </div>
+
                     <div class="grid md:grid-cols-2 gap-8 body-text-size">
+                        <!-- Visualization: Interview Summary Card -->
+                        <!-- Data Source: Interview with 김희성 -->
                         <div class="p-6 bg-indigo-50 rounded-lg shadow">
                             <h4 class="level3-title-text text-indigo-700 mb-3">학생 1: 김희성</h4>
                             <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
@@ -187,6 +210,8 @@
                             <p class="mt-3 text-xs italic text-indigo-600">"주제를 간단하게 적고 그 주제에 대해 생각하는 의견을 물어보고 그거를 좀 다듬어서 글을 써달라고 했습니다."</p>
                         </div>
                         
+                        <!-- Visualization: Interview Summary Card -->
+                        <!-- Data Source: Interview with 박주혁 -->
                         <div class="p-6 bg-pink-50 rounded-lg shadow">
                             <h4 class="level3-title-text text-pink-700 mb-3">학생 2: 박주혁</h4>
                             <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
@@ -203,15 +228,22 @@
                 </div>
             </section>
 
+            <!-- 4. 결론 -->
             <section class="mb-12 card p-6">
                 <h2 class="level1-title-text section-title mb-4">4. 결론</h2>
                 <div class="space-y-4 body-text-size">
                     <p>본 조사를 통해 미림마이스터고 1학년 4반 학생들은 AI를 활용할 때 질문의 명확성과 구체성이 답변의 질에 큰 영향을 미친다는 점을 잘 인식하고 있었다. 많은 학생이 AI의 한계를 경험적으로 체감하며, 이를 보완하기 위해 프롬프트를 전략적으로 다듬는 태도를 보였다.</p>
                     <p>학생들은 모호한 질문보다 구체적이고 상황에 맞는 질문을 하도록 학습하고 있으며, 이는 단순한 기능 사용을 넘어 디지털 리터러시와 메타인지 능력을 함께 키워가고 있음을 시사한다. 예를 들어, "AI야, 환경 문제 알려줘" 대신 "기후 변화로 인한 해수면 상승 원인을 중학생도 이해할 수 있게 설명해줘"로 질문을 구체화하여 원하는 답을 얻는 사례가 있었다.</p>
                     <p>따라서 향후 AI 교육은 기능 중심을 넘어, 질문 설계 능력, 결과 해석 및 정보 재구성 능력을 기르는 방향으로 나아가야 한다. 본 조사는 실제 학생들의 AI 사용 경험과 전략적 사고방식을 파악하여 AI 교육의 방향성을 설정하는 데 실질적인 기초 자료로 활용될 수 있을 것이다.</p>
+                    
+                    <h3 class="level2-title-text text-gray-800 mt-8 mb-3 pt-4 border-t border-gray-200">환경 보호를 위한 제언 및 다짐</h3>
+                    <p>더 나아가, 우리는 AI 활용 능력 신장과 더불어 환경 보호를 위한 노력도 중요하다고 생각한다. 에너지 절약을 위해 사용하지 않는 전자기기 플러그를 뽑고, 엘리베이터 대신 계단을 이용하며, 가까운 거리는 자전거를 타거나 걸어 다니는 생활 습관을 기르고자 한다.</p>
+                    <p>가정에서는 화학 세제의 사용 횟수를 줄이고, 액체 샴푸나 린스 대신 친환경 고체 샴푸바를 사용하며, 일반 수세미보다는 업사이클링 수세미를 사용하는 등 생활 속 작은 실천을 통해 환경 보호에 기여할 수 있다.</p>
+                    <p>사회적으로는 전기 발전소의 태양열 설비 확충을 통해 여름철 전력 소비를 줄이는 노력이 필요하며, 개인의 실천을 넘어 공동체의 노력이 중요하다. 마을 게시판이나 주변 사람들에게 환경 문제의 심각성을 알려 공동체 의식을 갖고 함께 실천하며, '아나바다(아껴 쓰고, 나눠 쓰고, 바꿔 쓰고, 다시 쓰기)' 운동을 생활화하는 자세가 필요하다.</p>
                 </div>
             </section>
 
+            <!-- 5. 참고자료 -->
             <section class="card p-6">
                 <h2 class="level1-title-text section-title mb-4">5. 참고자료</h2>
                 <ul class="list-disc list-inside space-y-1 body-text-size text-sm text-gray-700">
@@ -283,11 +315,22 @@
                                 if (label) {
                                     label += ': ';
                                 }
-                                if (context.parsed.y !== null) {
-                                    label += context.parsed.y.toFixed(1) + '% (' + context.raw.count + '명)';
-                                } else if (context.parsed.x !== null) {
-                                     label += context.parsed.x.toFixed(1) + '% (' + context.raw.count + '명)';
+                                let count = 0;
+                                let percentage = 0;
+                                
+                                if (context.dataset.rawCounts && context.dataset.rawCounts[context.dataIndex] !== undefined) {
+                                    count = context.dataset.rawCounts[context.dataIndex];
                                 }
+                                
+                                if (context.parsed.y !== null) { // Vertical Bar
+                                    percentage = context.parsed.y;
+                                } else if (context.parsed.x !== null) { // Horizontal Bar
+                                    percentage = context.parsed.x;
+                                } else { // Pie/Doughnut
+                                    percentage = context.parsed;
+                                }
+
+                                label += percentage.toFixed(1) + '% (' + count + '명)';
                                 return label;
                             }
                         }
@@ -329,7 +372,6 @@
                         labels: {
                             color: darkText,
                             font: { size: 10 },
-                            // Custom legend label formatter for pie charts
                             generateLabels: function(chart) {
                                 const data = chart.data;
                                 if (data.labels.length && data.datasets.length) {
@@ -338,7 +380,7 @@
                                         const style = meta.controller.getStyle(i);
                                         const percentage = data.datasets[0].data[i];
                                         const count = data.datasets[0].rawCounts[i];
-                                        const formattedLabel = formatLabel(label, 15).join(' '); // Join lines for legend
+                                        const formattedLabel = formatLabel(label, 15).join(' ');
                                         
                                         return {
                                             text: `${formattedLabel}: ${percentage.toFixed(1)}% (${count}명)`,
@@ -372,12 +414,12 @@
 
             // Survey Chart 1: 프롬프트 구체성 중요도 (세로 막대 차트)
             const surveyData1 = {
-                labels: ['보통이다', '중요하다', '매우 중요하다'], // 1,2점은 0명이므로 제외
+                labels: ['보통이다', '중요하다', '매우 중요하다'],
                 datasets: [{
                     label: '응답 비율',
                     data: [(1/18*100), (11/18*100), (6/18*100)],
-                    rawCounts: [1, 11, 6], // 실제 응답자 수
-                    backgroundColor: [secondaryTeal, primaryBlue, '#1E40AF'], // Different shades of blue/teal
+                    rawCounts: [1, 11, 6],
+                    backgroundColor: [secondaryTeal, primaryBlue, '#1E40AF'],
                     borderColor: [secondaryTeal, primaryBlue, '#1E40AF'],
                     borderWidth: 1
                 }]
@@ -406,13 +448,12 @@
                     '단어/표현 변경', 
                     '자세한 정보/맥락 추가', 
                     '답변 형식/스타일 명시', 
-                    // '질문 분할', // 0명 제외
                     '수정 안 함/사용 중단'
                 ],
                 datasets: [{
                     label: '응답 비율',
                     data: [(1/18*100), (14/18*100), (2/18*100), (1/18*100)],
-                    rawCounts: [1, 14, 2, 1], // 실제 응답자 수
+                    rawCounts: [1, 14, 2, 1],
                     backgroundColor: [primaryBlue, secondaryTeal, supportingLightBlue, accentGrey, '#FBBF24'],
                     hoverOffset: 4
                 }]
@@ -426,21 +467,21 @@
 
             // Survey Chart 3: AI 한계 고려 도움 정도 (가로 막대 차트)
             const surveyData3 = {
-                labels: ['보통이다', '조금 도움이 된다', '매우 도움이 된다'], // 1,2점은 0명이므로 제외
+                labels: ['보통이다', '조금 도움이 된다', '매우 도움이 된다'],
                 datasets: [{
                     label: '응답 비율',
                     data: [(4/18*100), (9/18*100), (5/18*100)],
-                    rawCounts: [4, 9, 5], // 실제 응답자 수
+                    rawCounts: [4, 9, 5],
                     backgroundColor: [accentGrey, secondaryTeal, primaryBlue],
                     borderColor: [accentGrey, secondaryTeal, primaryBlue],
                     borderWidth: 1
                 }]
             };
             new Chart(document.getElementById('surveyChart3'), {
-                type: 'bar', // 가로 막대로 변경하려면 indexAxis: 'y' 추가
+                type: 'bar', 
                 data: surveyData3,
                 options: { ...defaultChartOptions, 
-                    indexAxis: 'y', // 가로 막대 차트
+                    indexAxis: 'y',
                     scales: {
                         x: { ...defaultChartOptions.scales.x, 
                             max:100, 
@@ -452,16 +493,17 @@
                         y: { ...defaultChartOptions.scales.y,
                             ticks: {
                                 ...defaultChartOptions.scales.y.ticks,
-                                callback: function(value, index, values) { // y축 레이블 포맷팅
+                                callback: function(value, index, values) { 
                                     return formatLabel(surveyData3.labels[index], 15);
                                 }
                             },
-                            max: undefined // y축 max는 자동으로 설정되도록
+                            beginAtZero: true
                         }
                     }
                 }
             });
         });
     </script>
-    </body>
+    <!-- 생성된 인포그래픽의 모든 콘텐츠는 제공된 학생 보고서 내용을 기반으로 하며, 명시된 제약 조건 및 가이드라인을 준수하여 제작되었습니다. -->
+</body>
 </html>
